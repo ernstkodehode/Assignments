@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightgray;
+  font-family: basic;
+}
+
+header {
+  background-color: grey;
+  color: #29d3da;
+}
+
+main {
+  margin: 10px;
+}
+
+main p {
+  font-size: 1.3rem;
+  margin-bottom: 50px;
+}
+
+/* nav bar */
+/* nav {
+} */
+
+ul {
+  list-style-type: none;
+  overflow: hidden;
+  background-color: #333333;
+  position: sticky;
+  top: 0;
+}
+
+ul li {
+  float: left;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a.hover {
+  background-color: #111111;
+}
+
+ul li a:hover:not(.active) {
+  background-color: #111111;
+}
+
+ul li a.active {
+  background-color: #4caf50;
+}
+
+#about {
+  float: right;
+}
+
+/* font */
+.basic-regular {
+  font-family: "Basic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#logo {
+  height: 75px;
+  position: relative;
+  top: 10px;
+  margin-left: 15px;
+}
+
+#logotext {
+  font-family: Basic;
+  display: inline-block;
+  margin-bottom: 20px;
+  position: relative;
+  top: -20px;
+  left: 10px;
+}
+
+h1 {
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+}
+
+.logolink {
+  text-decoration: none;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #333333;
+  color: white;
+  text-align: center;
+}
