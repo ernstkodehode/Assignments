@@ -1,0 +1,89 @@
+/* css reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 0%, 95%);
+}
+
+.card-container {
+  display: flex;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 10px§;
+}
+
+.card {
+  width: 307px;
+  height: 496px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card button {
+  width: fit-content;
+  margin-top: auto;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  background-color: hsl(0, 0%, 95%);
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.card img {
+  width: 68px;
+  height: auto;
+}
+
+.sedans button {
+  color: hsl(31, 77%, 52%);
+}
+
+.suvs button {
+  color: hsl(184, 100%, 22%);
+}
+
+.luxury button {
+  color: hsl(179, 100%, 13%);
+}
+
+
+.sedans {
+  background-color: hsl(31, 77%, 52%);
+}
+
+.suvs {
+  background-color: hsl(184, 100%, 22%);
+}
+
+.luxury {
+  background-color: hsl(179, 100%, 13%);
+}
+
+h2 {
+  margin-top: 28px;
+  margin-bottom: 25px;
+  color: hsl(0, 0%, 95%);
+  font-family: "Big Shoulders", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+p {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+}
