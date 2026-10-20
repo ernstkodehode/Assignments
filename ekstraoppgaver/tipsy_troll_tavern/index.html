@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tipsy Troll Tavern</title>
+  </head>
+  <body>
+    <header>
+      <a href="#hjem" class="logo">
+        <img src="./images/TTT-logo.png" alt="logo">
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#hjem">Hjem</a></li>
+          <li><a href="#spesial">Dagens spesial</a></li>
+          <li><a href="#om-oss">Om oss</a></li>
+          <li><a href="#contact">Kontakt oss</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="hjem" class="hero">
+        <div class="herocontent">
+          <h1>Velkommen, reisende!</h1>
+          <p>
+            Et varmt og magisk verthus for eventyrere, riddere, troll og alle
+            som trenger et godt brygg.
+          </p>
+          <a href="#spesial" class="button">Se dagens spesial</a>
+        </div>
+      </section>
+
+      <section id="spesial" class="special">
+        <h2>Dagens Spesial</h2>
+
+        <div class="special-card">
+          <h3>Dreamweaver's delight</h3>
+          <p>
+            Et mystisk brygg med toner av honning, måneskinn og akkurat passe
+            mye magi.
+          </p>
+          <span class="price"><img src="./images/coin-bag.svg" alt="coin"> 45 Gullmynter</span>
+        </div>
+      </section>
+
+      <section id="om-oss">
+        <div class="about">
+          <h2>Om oss</h2>
+          <p>
+            Tipsy troll tavern har vært kongerikets favorittsted i flere hundre
+            år- her møter du vennlige troll, modige eventryrere og bartendere
+            som alltid har en god historie på lur.
+          </p>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <h2>Send en magisk beskjed</h2>
+        <p>Har du spørsmål, ønsker eller en spesielt god vits? </p>
+
+        <form>
+          <div>
+            <label for="name">Navn</label>
+            <input type="text" name="name" id="name" required>
+          </div>
+
+          <div>
+            <label for="messageMelding"></label>
+            <textarea name="message" id="message" required></textarea>
+          </div>
+
+          <button type="submit"> Send melding</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 Tipsy Troll Tavern – Signert med blekk og trollmagi</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tilbakemelding</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="index.html" class="logo">Craftsvilla</a>
+
+        <ul class="nav-links">
+          <li><a href="index.html">Hjem</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="gallery.html">Galleri</a></li>
+          <li><a href="feedback.html">Tilbakemelding</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-banner">
+        <h1>Vi vil gjerne høre fra deg!</h1>
+
+        <p>Tilbakemeldingene dine hjelper oss med å gjøre workshopene bedre.</p>
+      </section>
+
+      <section class="form-section">
+        <form action="#" class="form-box">
+          <div class="form-group">
+            <label for="feedback-name">Navn</label>
+            <input type="text" id="feedback-name" name="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="feedback-email">E-post</label>
+            <input type="email" name="email" id="feedback-email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="attended-workshop">Workshop deltatt på</label>
+            <select name="workshop" id="attended-workshop">
+              <option>Mosaikkunst</option>
+              <option>Akvarellmaling</option>
+              <option>Lerretmaling</option>
+              <option>Annet / Flere</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="favorite">Hva likte du best?</label>
+            <textarea name="favorite" id="favorite"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Hvordan kan vi forbedre opplevelsen din?</label>
+            <textarea name="improvements" id="improvements"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Vil du anbefale Craftsvilla?</label>
+
+            <div class="radio-group">
+              <label>
+                <input type="radio" name="recommend" value="yes" />Ja</label
+              >
+
+              <label>
+                <input type="radio" name="recommend" value="no" />Nei</label
+              >
+
+              <label>
+                <input
+                  type="radio"
+                  name="recommend"
+                  value="mabye"
+                />Kanskje</label
+              >
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="image">Last opp et bilde</label>
+            <input type="file" name="image" id="image" accept="image/*" />
+          </div>
+
+          <div class="form-group checkbox-group">
+            <input type="checkbox" name="permission" id="permission" />
+            <label for="permission">
+              Jeg gir Craftsvilla tillatelse til å dele Tilbakemeldingen min på
+              nettstedet eller sosiale medier.
+            </label>
+          </div>
+
+          <button type="submit" class="button">Send tilbakemelding</button>
+        </form>
+      </section>
+
+      <section>
+        <div class="section-heading">
+          <h2>Hva sier deltakerene våre</h2>
+        </div>
+        `
+
+        <div class="testimonials">
+          <article class="testimonial">
+            <span>★★★★★</span>
+            <p>
+              "En kjempehyggelig aktivitet for hele familien. Vi kommer gjerne
+              igjen!"
+            </p>
+            <strong>- Maria</strong>
+          </article>
+
+          <article class="testimonial">
+            <span>★★★★★</span>
+            <p>"Perfekt teambuilding. Rolig, kreativt og veldig sosialt."</p>
+            <strong>- Jonas</strong>
+          </article>
+
+          <article class="testimonial">
+            <span>★★★★★</span>
+            <p>
+              "Jeg trodde ikke jeg var kreativ, men jeg ble veldig fornøyd med
+              bildet."
+            </p>
+            <strong>- Sara</strong>
+          </article>
+        </div>
+      </section>
+
+      <footer>
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>Craftsvilla</h3>
+            <p>Kreativitet, samhold og avslapning</p>
+          </div>
+
+          <div class="footer-column">
+            <h3>Kontakt</h3>
+            <p>hello@craftsvilla.no</p>
+            <p>+47 123 45 678</p>
+          </div>
+
+          <div class="footer-column">
+            <h3>Snarveier</h3>
+
+            <ul>
+              <li><a href="booking.html">Bestill workshop</a></li>
+              <li><a href="gallery.html">Se galleri</a></li>
+              <li><a href="feedback.html">Gi tilbakemelding</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Følg oss</h3>
+            <div class="socials">
+              <a href="#"><img src="./images/IG.png" alt="IG logo" /></a>
+              <a href="#"><img src="./images/X.png" alt="X logo" /></a>
+              <a href="#"><img src="./images/FB.png" alt="FB logo" /></a>
+              <a href="#"
+                ><img src="./images/Pin.png" alt="Pinterest logo"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

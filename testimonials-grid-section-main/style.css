@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --color-primary-purple-50: hsl(260, 100%, 95%);
+  --color-primary-purple-300: hsl(264, 82%, 80%);
+  --color-primary-purple-500: hsl(263, 55%, 52%);
+
+  --color-neutral-white: hsl(0, 0%, 100%);
+  --color-neutral-grey-100: hsl(214, 17%, 92%);
+  --color-neutral-grey-200: hsl(0, 0%, 81%);
+  --color-neutral-grey-400: hsl(224, 10%, 45%);
+  --color-neutral-grey-500: hsl(217, 19%, 35%);
+  --color-neutral-dark-blue: hsl(219, 29%, 14%);
+  --color-neutral-black: hsl(0, 0%, 7%);
+}
+
+/* css reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  background-color: #f5f5f5;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.testimonials {
+  width: 1110px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  grid-template-areas:
+    "featured featured top-small tall"
+    "bottom-small bottom-wide bottom-wide tall";
+}
+
+.card {
+  padding: 32px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.quote-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.quote {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.name {
+  font-weight: 500;
+}
+
+.role {
+  opacity: 0.7;
+}
+
+.featured,
+.top-small,
+.bottom-wide {
+  color: var(--color-neutral-white);
+}
+
+.featured {
+  grid-area: featured;
+  background-color: var(--color-primary-purple-500);
+  background-image: url(./images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: right 15% top;
+  background-size: 104px auto;
+}
+
+.top-small {
+  grid-area: top-small;
+  color: var(--color-neutral-white);
+  background-color: var(--color-neutral-grey-500);
+}
+
+.tall {
+  grid-area: tall;
+  color: var(--color-neutral-dark-blue);
+  background-color: var(--color-neutral-white);
+}
+
+.bottom-small {
+  grid-area: bottom-small;
+  color: var(--color-neutral-dark-blue);
+  background-color: var(--color-neutral-white);
+}
+
+.bottom-wide {
+  grid-area: bottom-wide;
+  color: var(--color-neutral-white);
+  background-color: var(--color-neutral-dark-blue);
+}
+
+.bottom-small,
+.tall h2 {
+  color: var(--color-neutral-grey-500);
+}
