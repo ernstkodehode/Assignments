@@ -20,11 +20,19 @@ Funksjonen skal ta inn et tall som parameter og returnere
 funksjonen)
 
 ******************************************************************************/
-const number = 12
 
-function oddEven(number){
-if (number)
+function oddEven(number) {
+  if (number % 2 === 0) {
+    return "det er partall";
+  } else {
+    return "det er oddetall";
+  }
 }
+
+console.log(oddEven(3));
+console.log(oddEven(8));
+
+//Funksjonen sjekker om tallet at det kan bli delt på 2 og om svaret er 0, er det partall. om ikkje er det et oddetall
 
 /******************************************************************************
 2.
@@ -37,8 +45,11 @@ i STORE BOKSTAVER med et utropstegn på slutten.
 Eksempel: "Dette er kult" skal returnere "DETTE ER KULT!"
 
 ******************************************************************************/
+const upperCasing = (text) => {
+  return text.toUpperCase() + "!";
+};
 
-// Skriv koden for oppgave 2 her
+console.log(upperCasing("dette er kult"));
 
 /******************************************************************************
 3.
@@ -62,7 +73,27 @@ Hvis ingen timeverdi mottas, skal funksjonen returnere en feilmelding.
 
 ******************************************************************************/
 
-// Skriv koden for oppgave 3 her
+function greeting(name, time) {
+  if (time === undefined) {
+    return "Mangler timeverdi";
+  } else if (time < 0 || time > 23) {
+    return "Invalid time";
+  }
+  if (time <= 5) {
+    return `God natt ${name}!`;
+  }
+  if (time <= 11) {
+    return `God morgen ${name}!`;
+  }
+  if (time <= 17) {
+    return `God dag ${name}!`;
+  }
+  if (time <= 23) {
+    return `God kveld ${name}!`;
+  }
+}
+
+console.log(greeting("Ernst", 12));
 
 /******************************************************************************
 4.
@@ -78,8 +109,20 @@ Eksempel 2: ["En", "To", "Tre", "Fire", "Fem", "Seks"] skal returnere
 ["To", "Tre", "Fire", "Fem"].
 
 ******************************************************************************/
+const colors = ["Rød", "Grønn", "Blå", "Gul"];
+const numbers = ["En", "To", "Tre", "Fire", "Fem", "Seks"];
 
-// Skriv koden for oppgave 4 her
+function removeFirstLast(items) {
+  items.splice(0, 1);
+  items.splice(-1, 1);
+  return items;
+}
+
+removeFirstLast(colors);
+removeFirstLast(numbers);
+
+console.log(colors);
+console.log(numbers);
 
 /******************************************************************************
 5.
@@ -100,7 +143,11 @@ Eksempel 3: "   vanskelig        " skal returnere "gøy".
 
 ******************************************************************************/
 
-// Skriv koden for oppgave 5 her
+const improveText = (text) => {
+  return text.replace("vanskelig", "gøy").trim();
+};
+
+console.log(improveText("       Javascript er vanskelig         "));
 
 /******************************************************************************
 6.
@@ -124,9 +171,16 @@ Steg 4: Kombiner alle elementene i arrayen til en enkelt string ved å bruke " |
 Ekstra utfordring: Lag et nytt array som kun inkluderer elementer som inneholder bokstaven "e".
 
 ******************************************************************************/
+items.shift()
 
-// Skriv koden for oppgave 6 her
+items.splice(2,1, "Linjal")
+console.log(items);
 
+items.splice(0,2,"Markeringspenn")
+console.log(items);
+
+const string = items.join(" | ")
+console.log(string);
 /******************************************************************************
 7.
 
@@ -151,7 +205,7 @@ Eksempel 4: (["En", "To", "Tre"], "To") --> ["En", "Tre"]
 
 ******************************************************************************/
 
-// Skriv koden for oppgave 7 her
+
 
 /******************************************************************************
 8.

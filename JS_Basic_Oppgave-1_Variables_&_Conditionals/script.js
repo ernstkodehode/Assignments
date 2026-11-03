@@ -8,7 +8,7 @@ ved å bruke en av metodene vi viste i første forelesning.
 javascript.js
 ******************************************************************************/
 
-// Løs denne oppgaven i index.html 
+// Løs denne oppgaven i index.html
 
 // Done!
 
@@ -28,15 +28,15 @@ const når du definerer variablene.
 
 // Skriv koden for oppgave 2 her
 
-const firstName = "Per Ole"
+const firstName = "Per Ole";
 
-const lastName = "Karlsen"
+const lastName = "Karlsen";
 
-const age = 32
+const age = 32;
 
-let isHuman = true
+let isHuman = true;
 
-let personTags = ["Male", "Kinda old", "Hella handsome"]
+let personTags = ["Male", "Kinda old", "Hella handsome"];
 
 /******************************************************************************
 OPPGAVE 3
@@ -47,19 +47,27 @@ Prøv ut noen av operatorene vi så på i forrige forelesning:
 
 Skriv noen eksempler der du tester disse operatorene.
 ******************************************************************************/
-let number = 10
+let number = 10;
 
-number++
-console.log(number)
+console.log(number + 10);
 
-number--
-console.log(number)
+console.log(number - 5);
 
-number+=10
-console.log(number)
+console.log(number / 2);
 
-number-=5
-console.log(number)
+console.log(number * 2);
+
+number++;
+console.log(number);
+
+number--;
+console.log(number);
+
+number += 10;
+console.log(number);
+
+number -= 5;
+console.log(number);
 
 /******************************************************************************
 OPPGAVE 4
@@ -90,12 +98,12 @@ let goToPage = "";
 
 // Skriv koden for oppgave 4 her
 
-if (userName !== " " && userAge >=18 && userIsBlocked === false) {
-userIsLoggedIn = true
-goToPage = "/home"
-console.log("Welcome!")
+if (userName !== "" && userAge >= 18 && userIsBlocked === false) {
+  userIsLoggedIn = true;
+  goToPage = "/home";
+  console.log("Welcome!");
 } else {
-    console.log("Error: requirements aren't fulfilled")
+  console.log("Error: requirements aren't fulfilled");
 }
 
 /******************************************************************************
@@ -119,7 +127,6 @@ const userMale = true;
 // Skriv koden for oppgave 5 her
 
 let userTitle = userMale ? "Mr." : "Mrs.";
-let name = userMale ? "Joe":"Josy";
+let name = userMale ? "Joe" : "Josy";
 
-console.log(`Welcome ${userTitle} ${name} `)
-
+console.log(`Welcome ${userTitle} ${name} `);
