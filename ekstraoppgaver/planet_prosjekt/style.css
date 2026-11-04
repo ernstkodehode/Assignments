@@ -1,0 +1,184 @@
+/* Alle fargene samlet ett sted. Endrer du her, endres hele siden */
+:root {
+  --bg: #0b0b0f;
+  --bg-card: #17171f;
+  --text: #f2f2f2;
+  --text-muted: #a0a0aa;
+  --accent: #c1440e;
+  --accent-light: #e8c9a0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+.logo {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.logo,
+h1 {
+  text-transform: uppercase;
+}
+
+.logo {
+  font-size: 2rem;
+  letter-spacing: 0.15em;
+  color: var(--text);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--bg);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 4rem;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+section:not(#hero) {
+  padding: 6rem 4rem;
+}
+
+nav a:hover {
+  color: var(--accent-light);
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  padding: 0 32px;
+
+  background:
+    linear-gradient(rgba(11, 11, 15, 0.5), rgba(11, 11, 15, 0.8)),
+    url("images/mars2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#hero h1 {
+  font-size: 6rem;
+}
+
+#hero p {
+  font-size: 1.5rem;
+  color: var(--accent-light);
+  margin-top: 1rem;
+}
+
+#about {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+#about img {
+  height: 450px;
+}
+.about-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#about img {
+  flex: 1;
+  min-width: 0;
+  height: 450px;
+}
+
+.fact-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.fact-card {
+  background: var(--bg-card);
+  flex: 1 1 30%;
+  padding: 2rem;
+  transition: transform 0.2s ease;
+}
+
+.fact-card:hover {
+  box-shadow:
+    rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  transform: scale(1.05);
+}
+
+.fact-card h3 {
+  color: var(--accent);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.fact-card p,
+.gallery-item p {
+  color: var(--text-muted);
+}
+
+.gallery-grid {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.gallery-item {
+  flex: 1;
+}
+
+.gallery-item p {
+  margin-top: 0.75rem;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+footer {
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-muted);
+}
