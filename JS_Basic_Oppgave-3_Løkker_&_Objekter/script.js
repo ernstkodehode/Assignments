@@ -87,15 +87,30 @@ const people = [
   },
 ];
 let combinedAge = 0;
-
-for (let i = 0; i < people.length; i++) {
-    const person = people[i]
-
-    if
-}
-
 let averageAge = 0;
 
+for (let i = 0; i < people.length; i++) {
+  const person = people[i];
+
+  if (person.name === "Otto") {
+    continue;
+  }
+
+  person.city = cities[Math.floor(Math.random() * cities.length)];
+  person.title = person.male ? "Mr." : "Ms.";
+  person.age += 2;
+  person.hobbies.unshift("coding");
+
+  combinedAge += person.age;
+}
+averageAge = combinedAge / (people.length - 1);
+
+console.log(people);
+console.log("combinedAge:", combinedAge);
+console.log("averageAge:", averageAge);
+
+console.log(people[0]);
+console.log(people[5]);
 /******************************************************************************
 2.
 
@@ -116,7 +131,20 @@ diceRoller(5, 20) skal returnere et array med 5 tilfeldige tall fra 1-20.
 
 ******************************************************************************/
 
-// Skriv koden for oppgave 2 her
+function diceRoller(amount, sides = 6) {
+  const rolls = [];
+
+  for (let i = 0; i < amount; i++) {
+    const roll = Math.floor(Math.random() * sides + 1);
+    rolls.push(roll);
+  }
+
+  return rolls;
+}
+
+console.log(diceRoller(4));
+console.log(diceRoller(6));
+console.log(diceRoller(5, 20));
 
 /******************************************************************************
 3.
@@ -143,8 +171,19 @@ skal returnere:
 
 ******************************************************************************/
 
-// Skriv koden for oppgave 3 her
+function cleanWords(words) {
+  const cleaned = [];
 
+  for (const word of words) {
+    cleaned.push(word.trim().toLowerCase());
+  }
+
+  return cleaned.join(" ");
+}
+
+console.log(
+  cleanWords([" thIS", "teXt  ", " nEeds ", "to", "BE", "cleANED   ", " Up"]),
+);
 /******************************************************************************
 4.
 
@@ -171,8 +210,24 @@ skal returnere "whao is ohe ptino tf ohis?"
 ******************************************************************************/
 
 function doubleSwap(string, charA, charB) {
-  // Skriv koden for oppgave 4 her
+  let result = "";
+
+  for (const char of string) {
+    if (char === charA) {
+      result += charB;
+    } else if (char === charB) {
+      result += charA;
+    } else {
+      result += char;
+    }
+  }
+
+  return result;
 }
+
+console.log(doubleSwap("this is a string", "i", "s"));
+console.log(doubleSwap("m#ybe #nother #ppro#ch is necess#ry", "#", "a"));
+console.log(doubleSwap("what is the point of this?", "o", "t"));
 
 /******************************************************************************
 5.
@@ -216,4 +271,30 @@ const greetings = [
   "Good afternoon gentlemen!",
 ];
 
-// Skriv koden for oppgave 5 her
+const helloWords = {
+  hello: "engelsk",
+  ciao: "italiensk",
+  salut: "fransk",
+  hallo: "tysk",
+  hola: "spansk",
+  czesc: "polsk",
+  cześć: "polsk",
+};
+
+function helloChecker(text) {
+  const words = text.toLowerCase().split(" ");
+
+  for (const word of words) {
+    const clean = word.replace(/[.,!?]/g, "");
+
+    if (clean in helloWords) {
+      return `HELLO oppdaget på ${helloWords[clean]}.`;
+    }
+  }
+
+  return "Ingen HELLO oppdaget.";
+}
+
+for (const sentence of greetings) {
+  console.log(sentence, "→", helloChecker(sentence));
+}
