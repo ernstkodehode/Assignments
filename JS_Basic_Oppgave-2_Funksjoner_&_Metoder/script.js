@@ -21,18 +21,15 @@ funksjonen)
 
 ******************************************************************************/
 
-function oddEven(number) {
-  if (number % 2 === 0) {
-    return "det er partall";
-  } else {
-    return "det er oddetall";
-  }
-}
+const oddEven = (number) => (number % 2 === 0 ? "Partall" : "Oddetall");
 
 console.log(oddEven(3));
 console.log(oddEven(8));
+console.log(oddEven(0));
+console.log(oddEven(-4));
+console.log(oddEven(-3));
 
-//Funksjonen sjekker om tallet at det kan bli delt på 2 og om svaret er 0, er det partall. om ikkje er det et oddetall
+//Funksjonen sjekka om tallet kan bli delt på 2 og om svaret er 0, er det partall. ellers er det et oddetall
 
 /******************************************************************************
 2.
@@ -46,10 +43,12 @@ Eksempel: "Dette er kult" skal returnere "DETTE ER KULT!"
 
 ******************************************************************************/
 const upperCasing = (text) => {
-  return text.toUpperCase() + "!";
+  return text.trim().toUpperCase() + "!";
 };
 
 console.log(upperCasing("dette er kult"));
+
+// gjer om teksta til store bokstava og legg inn et ! på slutten
 
 /******************************************************************************
 3.
@@ -74,26 +73,35 @@ Hvis ingen timeverdi mottas, skal funksjonen returnere en feilmelding.
 ******************************************************************************/
 
 function greeting(name, time) {
-  if (time === undefined) {
-    return "Mangler timeverdi";
-  } else if (time < 0 || time > 23) {
-    return "Invalid time";
+  if (!Number.isFinite(time)) {
+    return "Ugyldig tid";
+  }
+  if (time < 0 || time > 23) {
+    return "Ugyldig tid";
   }
   if (time <= 5) {
-    return `God natt ${name}!`;
+    return `God natt ${name}`;
   }
   if (time <= 11) {
-    return `God morgen ${name}!`;
+    return `God morgen ${name}`;
   }
   if (time <= 17) {
-    return `God dag ${name}!`;
+    return `God dag ${name}`;
   }
-  if (time <= 23) {
-    return `God kveld ${name}!`;
-  }
+  return `God kveld ${name}`;
 }
 
+console.log(greeting("Ernst", -1));
+console.log(greeting("Ernst", 5));
+console.log(greeting("Ernst", 6));
+console.log(greeting("Ernst", 11));
 console.log(greeting("Ernst", 12));
+console.log(greeting("Ernst", 17));
+console.log(greeting("Ernst", 18));
+console.log(greeting("Ernst", 24));
+console.log(greeting("Ernst"));
+
+// returnera en hilsen basert på klokka, eller en feilmelding
 
 /******************************************************************************
 4.
@@ -112,18 +120,17 @@ Eksempel 2: ["En", "To", "Tre", "Fire", "Fem", "Seks"] skal returnere
 const colors = ["Rød", "Grønn", "Blå", "Gul"];
 const numbers = ["En", "To", "Tre", "Fire", "Fem", "Seks"];
 
-function removeFirstLast(items) {
-  items.splice(0, 1);
-  items.splice(-1, 1);
-  return items;
+function removeFirstLast(list) {
+  return list.slice(1, -1);
 }
 
-removeFirstLast(colors);
-removeFirstLast(numbers);
+const colorsNoEnd = removeFirstLast(colors);
+const numbersNoEnd = removeFirstLast(numbers);
 
-console.log(colors);
-console.log(numbers);
+console.log(colors, colorsNoEnd);
+console.log(numbers, numbersNoEnd);
 
+// returnera en kopi av arrayet uten første og siste element
 /******************************************************************************
 5.
 
@@ -144,11 +151,12 @@ Eksempel 3: "   vanskelig        " skal returnere "gøy".
 ******************************************************************************/
 
 const improveText = (text) => {
-  return text.replace("vanskelig", "gøy").trim();
+  return text.replaceAll("vanskelig", "gøy").trim();
 };
 
 console.log(improveText("       Javascript er vanskelig         "));
 
+// bytta ut "vanskelig" med "gøy" og fjerna mellomrom foran og bak
 /******************************************************************************
 6.
 
@@ -171,16 +179,32 @@ Steg 4: Kombiner alle elementene i arrayen til en enkelt string ved å bruke " |
 Ekstra utfordring: Lag et nytt array som kun inkluderer elementer som inneholder bokstaven "e".
 
 ******************************************************************************/
-items.shift()
+items.shift();
 
-items.splice(2,1, "Linjal")
+// fjerna første elementet
+
+const i = items.indexOf("Viskelær");
+if (i !== -1) {
+  items.splice(i, 1, "Linjal");
+}
 console.log(items);
 
-items.splice(0,2,"Markeringspenn")
+// finn plasseringa til viskelær og erstatta det med linjal
+
+items.splice(0, 2, "Markeringspenn");
 console.log(items);
 
-const string = items.join(" | ")
+// fjerna fra start indeksen til penn, sletta 2 element, så notatblokk også, og erstatta det med markeringspenn
+
+const string = items.join(" | ");
 console.log(string);
+
+// legge til alle elementane i en string med | imellom
+
+const arrayE = items.filter((item) => item.includes("e"));
+console.log(arrayE);
+
+// filtrera alle element som inneholder e og laga et nytt array
 /******************************************************************************
 7.
 
@@ -205,7 +229,21 @@ Eksempel 4: (["En", "To", "Tre"], "To") --> ["En", "Tre"]
 
 ******************************************************************************/
 
+const toggleItem = (array, value) => {
+  const index = array.indexOf(value);
+  if (index === -1) {
+    array.push(value);
+  } else {
+    array.splice(index, 1);
+  }
 
+  return array;
+};
+
+console.log(toggleItem(["Rød", "Grønn"], "Blå"));
+console.log(toggleItem(["Rød", "Grønn", "Blå"], "Grønn"));
+console.log(toggleItem(["En", "To", "Tre"], "Fire"));
+console.log(toggleItem(["En", "To", "Tre"], "To"));
 
 /******************************************************************************
 8.
@@ -232,5 +270,24 @@ Hvis parameteret er en annen datatype:
 Returner "😎Kun primitive verdier😎".
 
 ******************************************************************************/
+function emojies(value) {
+  if (typeof value === "string") {
+    return `😎${value}😎`;
+  }
+  if (typeof value === "number") {
+    return `😎${String(value * 2)}😎`;
+  }
+  if (typeof value === "boolean") {
+    return value ? "😎Ja😎" : "😎Slapp av😎";
+  }
 
-// Skriv koden for oppgave 8 her
+  return "😎Kun primitive verdier😎";
+}
+
+console.log(emojies("hei"));
+console.log(emojies(42));
+console.log(emojies(true));
+console.log(emojies(false));
+console.log(emojies(null));
+console.log(emojies([1, 2]));
+console.log(emojies(undefined));
