@@ -41,9 +41,8 @@
   --shadow-card: 0 0.25rem 0.9375rem rgba(75, 51, 32, 0.12);
 }
 
-/* ==========================================================================
-   2. Grunnlag
-   ========================================================================== */
+/* 2. Grunnlag */
+
 * {
   margin: 0;
   padding: 0;
@@ -54,6 +53,7 @@ body {
   font-family: "DM Sans", Arial, sans-serif;
   color: var(--color-text);
   line-height: 1.6;
+  background-color: var(--color-background);
 }
 
 h1,
@@ -72,9 +72,8 @@ img {
   max-width: 100%;
 }
 
-/* ==========================================================================
-   3. Header og navigasjon
-   ========================================================================== */
+/* 3. Header og navigasjon */
+
 header {
   background-color: var(--color-background);
   border-bottom: 1px solid #eadfce;
@@ -106,9 +105,8 @@ header {
   letter-spacing: 0.125rem;
 }
 
-/* ==========================================================================
-   4. Knapper
-   ========================================================================== */
+/* 4. Knapper */
+
 .button {
   background-color: var(--color-primary);
   border-radius: var(--border-radius-round);
@@ -130,9 +128,8 @@ header {
   background-color: var(--color-secondary);
 }
 
-/* ==========================================================================
-   5. Hero
-   ========================================================================== */
+/* 5. Hero */
+
 .hero {
   display: flex;
   align-items: center;
@@ -160,9 +157,8 @@ header {
   color: var(--color-white);
 }
 
-/* ==========================================================================
-   6. Seksjoner og overskrifter
-   ========================================================================== */
+/* 6. Seksjoner og overskrifter */
+
 .section {
   padding: var(--space-section) 8%;
   max-width: var(--max-width);
@@ -186,10 +182,7 @@ header {
   max-width: 50rem;
   text-align: center;
 }
-
-/* ==========================================================================
-   7. Kort
-   ========================================================================== */
+/* 7. Kort */
 .cards {
   display: flex;
   align-items: stretch;
@@ -235,12 +228,15 @@ header {
   margin: 12px 0;
 }
 
-/* ==========================================================================
-   8. Fordeler
-   ========================================================================== */
+/* 8. Fordeler */
 .benefits {
   background-color: var(--color-section);
   padding: var(--space-section) 8%;
+}
+
+/* mørk overskrift på gul bakgrunn, for lesbarhet */
+.benefits .section-heading h2 {
+  color: var(--color-footer);
 }
 
 .benefit-list {
@@ -264,9 +260,7 @@ header {
   font-size: var(--font-size-medium);
 }
 
-/* ==========================================================================
-   9. Skjema
-   ========================================================================== */
+/* 9. Skjema */
 .form-section {
   margin: auto;
   max-width: 850px;
@@ -324,9 +318,8 @@ header {
   font-weight: normal;
 }
 
-/* ==========================================================================
-   10. Sidebanner (bestilling, galleri, tilbakemelding)
-   ========================================================================== */
+/* 10. Sidebanner (bestilling, galleri, tilbakemelding) */
+
 .page-banner {
   background-color: var(--color-section);
   padding: 70px 8%;
@@ -337,9 +330,7 @@ header {
   color: var(--color-footer);
 }
 
-/* ==========================================================================
-   11. Galleri
-   ========================================================================== */
+/* 11. Galleri */
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -366,9 +357,7 @@ header {
   transform: scale(1.04);
 }
 
-/* ==========================================================================
-   12. Tilbakemeldinger
-   ========================================================================== */
+/* 12. Tilbakemeldinger */
 .testimonials {
   display: flex;
   gap: var(--space-medium);
@@ -388,9 +377,7 @@ header {
   font-size: 1.375rem;
 }
 
-/* ==========================================================================
-   13. Footer
-   ========================================================================== */
+/* 13. Footer */
 footer {
   background-color: var(--color-footer);
   color: var(--color-white);
@@ -429,9 +416,7 @@ footer {
   gap: var(--space-small);
 }
 
-/* ==========================================================================
-   14. Responsivt
-   ========================================================================== */
+/* 14. Responsivt */
 @media (max-width: 768px) {
   .cards,
   .benefit-list,
@@ -468,8 +453,8 @@ footer {
     padding-inline: 6%;
   }
 
-  .gallery-item {
-    width: 100%;
+  .gallery {
+    grid-template-columns: 1fr;
   }
 
   .radio-group {
