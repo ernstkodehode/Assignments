@@ -365,9 +365,12 @@ header {
 }
 
 .testimonial {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-small);
   background-color: var(--color-white);
   border-radius: var(--border-radius-medium);
-  box-shadow: 1px 12px #4b33201a;
+  box-shadow: 0 4px 12px rgba(75, 51, 32, 0.1);
   flex: 1;
   padding: var(--space-medium);
 }
@@ -375,6 +378,10 @@ header {
 .testimonial span {
   color: var(--color-accent);
   font-size: 1.375rem;
+}
+
+.testimonial strong {
+  margin-top: auto;
 }
 
 /* 13. Footer */
