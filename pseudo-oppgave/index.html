@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="nb">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pseudo-elementer og pseudo-selektorer</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Lær pseudo-elementer og pseudo-selektorer</h1>
+      <p>En side for å øve på <code>::before</code>, <code>::after</code> og utvalgte pseudo-klasser.</p>
+    </header>
+
+    <main>
+      <section class="intro">
+        <h2>Seks ting du kan gjøre med CSS</h2>
+
+        <ul class="tips">
+          <li>Legge til en dekorativ linje før en overskrift</li>
+          <li>Sette en stjerne etter hvert listeelement</li>
+          <li>Farge annenhver rad i en liste</li>
+          <li>Style første og siste element ulikt</li>
+          <li class="special">Ekskludere ett element fra en regel</li>
+          <li>Lage en jevn overgang på en knapp</li>
+        </ul>
+
+        <button class="cta" type="button">Vis mer</button>
+      </section>
+
+      <section class="cards">
+        <div class="card">
+          <h3>::before</h3>
+          <p>Setter inn innhold før elementets eget innhold.</p>
+        </div>
+
+        <div class="card">
+          <h3>::after</h3>
+          <p>Setter inn innhold etter elementets eget innhold.</p>
+        </div>
+
+        <div class="card">
+          <h3>:hover</h3>
+          <p>Brukes når musepekeren er over elementet.</p>
+        </div>
+      </section>
+
+      <section class="highlight">
+        <h2>Fremhevet seksjon</h2>
+        <p>
+          Denne seksjonen skal få en dekorativ «boks» laget med
+          <code>::before</code> og <code>::after</code>.
+        </p>
+
+        <label for="email">E-post</label>
+        <input type="email" id="email" placeholder="navn@epost.no" />
+      </section>
+    </main>
+  </body>
+</html>

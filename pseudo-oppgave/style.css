@@ -1,0 +1,44 @@
+/* ==========================================================================
+   Pseudo-elementer og pseudo-selektorer
+   Skriv CSS-en din her.
+   ========================================================================== */
+
+/* Grunnstil – la stå, den er bare for å gjøre siden lesbar */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 2rem;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background: #faf8f5;
+}
+
+/* --------------------------------------------------------------------------
+   Del 1 – pseudo-elementer (::before og ::after)
+   -------------------------------------------------------------------------- */
+
+/* 1.1 Dekorativ linje før h1 – bruk .site-header h1::before */
+
+/* 1.2 Stjerne etter hvert listeelement – bruk .tips li::after */
+/* 1.3 Gi ::before og ::after ulik farge og størrelse */
+
+/* --------------------------------------------------------------------------
+   Del 2 – pseudo-selektorer
+   -------------------------------------------------------------------------- */
+
+/* 2.1 Annenhver rad i listen – bruk .tips li:nth-child(odd) */
+/* 2.2 Overgangseffekt på knappen – bruk .cta, .cta:hover og transition */
+/* 2.3 Første og siste listeelement får annen tekstfarge – :first-child / :last-child */
+/* 2.4 Ekskluder ett element med :not() – f.eks. .tips li:not(.special) */
+
+/* --------------------------------------------------------------------------
+   Ekstra utfordring (valgfritt)
+   -------------------------------------------------------------------------- */
+
+/* E1 «Boks» rundt .highlight laget med ::before og ::after */
+/* E2 Spesialeffekt på tekstfeltet når det har fokus – :focus */
+/* E3 Style én bestemt underseksjon – :nth-of-type() */
