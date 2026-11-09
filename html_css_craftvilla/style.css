@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap");
 
-/* ==========================================================================
-   1. Designvariabler
-   ========================================================================== */
+/* variabler */
 :root {
   /* farger */
   --color-primary: #bd654c;
@@ -41,7 +39,7 @@
   --shadow-card: 0 0.25rem 0.9375rem rgba(75, 51, 32, 0.12);
 }
 
-/* 2. Grunnlag */
+/* grunnstil */
 
 * {
   margin: 0;
@@ -72,7 +70,7 @@ img {
   max-width: 100%;
 }
 
-/* 3. Header og navigasjon */
+/* header og nav */
 
 header {
   background-color: var(--color-background);
@@ -105,7 +103,7 @@ header {
   letter-spacing: 0.125rem;
 }
 
-/* 4. Knapper */
+/* knapper */
 
 .button {
   background-color: var(--color-primary);
@@ -128,7 +126,7 @@ header {
   background-color: var(--color-secondary);
 }
 
-/* 5. Hero */
+/* hero */
 
 .hero {
   display: flex;
@@ -157,7 +155,7 @@ header {
   color: var(--color-white);
 }
 
-/* 6. Seksjoner og overskrifter */
+/* seksjoner */
 
 .section {
   padding: var(--space-section) 8%;
@@ -182,7 +180,7 @@ header {
   max-width: 50rem;
   text-align: center;
 }
-/* 7. Kort */
+/* kort */
 .cards {
   display: flex;
   align-items: stretch;
@@ -228,13 +226,13 @@ header {
   margin: 12px 0;
 }
 
-/* 8. Fordeler */
+/* fordeler */
 .benefits {
   background-color: var(--color-section);
   padding: var(--space-section) 8%;
 }
 
-/* mørk overskrift på gul bakgrunn, for lesbarhet */
+/* lesbarhet på gul bakgrunn */
 .benefits .section-heading h2 {
   color: var(--color-footer);
 }
@@ -260,7 +258,7 @@ header {
   font-size: var(--font-size-medium);
 }
 
-/* 9. Skjema */
+/* skjema */
 .form-section {
   margin: auto;
   max-width: 850px;
@@ -318,7 +316,7 @@ header {
   font-weight: normal;
 }
 
-/* 10. Sidebanner (bestilling, galleri, tilbakemelding) */
+/* sidebanner */
 
 .page-banner {
   background-color: var(--color-section);
@@ -330,7 +328,7 @@ header {
   color: var(--color-footer);
 }
 
-/* 11. Galleri */
+/* galleri */
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -357,7 +355,7 @@ header {
   transform: scale(1.04);
 }
 
-/* 12. Tilbakemeldinger */
+/* tilbakemeldinger */
 .testimonials {
   display: flex;
   gap: var(--space-medium);
@@ -384,7 +382,7 @@ header {
   margin-top: auto;
 }
 
-/* 13. Footer */
+/* footer */
 footer {
   background-color: var(--color-footer);
   color: var(--color-white);
@@ -423,7 +421,7 @@ footer {
   gap: var(--space-small);
 }
 
-/* 14. Responsivt */
+/* responsivt */
 @media (max-width: 768px) {
   .cards,
   .benefit-list,
