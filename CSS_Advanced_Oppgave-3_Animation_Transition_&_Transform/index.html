@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="nb">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Animasjon, transition og transform</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Bevegelse i CSS</h1>
+      <nav>
+        <a class="link" href="#demo">Se demoen</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="demo">
+        <p class="lead">
+          Animasjon, overgang og transformasjon. Tre måter å få ting til å
+          bevege seg på.
+        </p>
+        <div class="ball"></div>
+      </section>
+
+      <section class="demo">
+        <h2>Knapp og bilde</h2>
+
+        <img
+          class="zoom"
+          src="bilde.svg"
+          alt="Abstrakt illustrasjon med sirkler"
+        />
+
+        <button class="cta" type="button">Hold over meg</button>
+      </section>
+
+      <section class="cards">
+        <h2>Kort med alle tre</h2>
+
+        <div class="card-grid">
+          <article class="card">
+            <h3>Animasjon</h3>
+            <p>@keyframes med flere trinn.</p>
+          </article>
+
+          <article class="card">
+            <h3>Transition</h3>
+            <p>Jevn overgang ved hover.</p>
+          </article>
+
+          <article class="card">
+            <h3>Transform</h3>
+            <p>Rotasjon, skalering eller forskyvning.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Laget som øving i CSS-animasjon.</p>
+      <a class="link" href="#demo">Til toppen</a>
+    </footer>
+  </body>
+</html>

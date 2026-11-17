@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" role="img" aria-label="Abstrakt illustrasjon med sirkler">
+  <rect width="400" height="300" fill="#efe4d6" />
+  <circle cx="120" cy="110" r="70" fill="#bd654c" />
+  <circle cx="265" cy="150" r="90" fill="#e8b35f" opacity="0.85" />
+  <circle cx="205" cy="215" r="55" fill="#49382f" opacity="0.9" />
+  <rect x="300" y="45" width="60" height="60" rx="12" fill="#fffaf3" />
+</svg>
